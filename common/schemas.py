@@ -14,9 +14,9 @@ HumanChoice = Literal["approve", "reject", "edit"]
 
 
 # Confidence thresholds
-AUTO_APPROVE_THRESHOLD = 0.73   # >= 73% → no human, agent commits the comment directly
-ESCALATE_THRESHOLD = 0.58       # < 58% → escalate: agent asks the reviewer specific questions
-# 58–72% inclusive → human approval flow (reviewer clicks Approve / Reject / Edit)
+AUTO_APPROVE_THRESHOLD = 0.80   # >= 80% → no human, agent commits the comment directly
+ESCALATE_THRESHOLD = 0.50       # < 50% → escalate: agent asks the reviewer specific questions
+# 50–80% inclusive → human approval flow (reviewer clicks Approve / Reject / Edit)
 
 
 def risk_level_for(confidence: float) -> str:
